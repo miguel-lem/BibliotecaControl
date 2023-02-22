@@ -1,0 +1,38 @@
+<div class="card">
+    <div class="card-header">
+        Usuarios
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Cédula</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Ahora como los datos ya los extraemos desde la BD con el modelo
+                    podemos mostrarlos aqui en la tabla-->
+                    <tr *ngFor="let usuario of usuarios; let iControl=index">
+                        <td>{{usuario.cedula}}</td>
+                        <td>{{usuario.nombre}}</td>
+                        <td>{{usuario.apellido}}</td>
+                        <td>{{usuario.correo}}</td>
+                        <td>{{usuario.telefono}}</td>
+                        <td>
+                            <a class="btn btn-info" routerLink="/editar-usuario/{{usuario.cedula}}"> Editar </a> |
+                            <!--El iControl sirve para que se muestre las filas y si se elimina para que le saque de la vista--> 
+                            <a class="btn btn-danger" role="button" (click)="borrarUsuario(usuario.cedula,iControl)">Borrar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>

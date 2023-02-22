@@ -1,0 +1,59 @@
+<div class="card">
+    <div class="card-header">
+        Registrar libro
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formulariodeLibro" (ngSubmit)="enviarDatos()">
+            <div class="mb-3">
+                <label for="" class="form-label">Título</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="titulo" id="" aria-describedby="helpId" placeholder="Ingrese título del libro">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Año</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="anio" id="" aria-describedby="helpId" placeholder="Ingrese año de publicacion de libro">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Autor</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="autor" id="" aria-describedby="helpId" placeholder="Ingrese nombre del autor de libro">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Categoria</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="categoria" id="" aria-describedby="helpId" placeholder="Ingrese la categoria a la cual pertenece el libro">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Edición</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="edicion" id="" aria-describedby="helpId" placeholder="Ingrese el numero de edición de libro">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Idioma</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="idioma" id="" aria-describedby="helpId" placeholder="Ingrese el idioma en el cual esta escrito el libro">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Página</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="paginas" id="" aria-describedby="helpId" placeholder="Ingrese el número de paginas con las que cuenta el libro">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Descripción</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="descripcion" id="" aria-describedby="helpId" placeholder="Ingrese una breve descripcion del contenido de libro">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Ejemplares</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="ejemplares" id="" aria-describedby="helpId" placeholder="Ingrese el numero de ejemplares que guardará de este libro">
+              </div>
+              <div class="btn-group" role="group" aria-label="Button group name">
+                <button type="submit" class="btn btn-success">Agregar</button>
+                <button type="button" routerLink="/principal/" class="btn btn-primary">Cancelar</button>
+              </div>
+        </form>
+    </div>
+</div>
+

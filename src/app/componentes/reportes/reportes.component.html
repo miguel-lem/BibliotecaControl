@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+        Reportes
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Cedula</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Fecha de salida</th>
+                        <th scope="col">Fecha de entrega</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let reporte of reportes; let iControl=index">
+                        <td>{{reporte.cedula}}</td>
+                        <td>{{reporte.id_libro}}</td>
+                        <td>{{reporte.fecha_salida}}</td>
+                        <td>{{reporte.fecha_entrega}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>

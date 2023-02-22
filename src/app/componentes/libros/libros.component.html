@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-header">
+        Libros
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Año</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Edición</th>
+                        <th scope="col">Idioma</th>
+                        <th scope="col">Paginas</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Ejemplares</th>
+                        <th scope="col">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let libro of libros; let iControl=index">
+                        <td>{{libro.id}}</td>
+                        <td>{{libro.titulo}}</td>
+                        <td>{{libro.anio}}</td>
+                        <td>{{libro.autor}}</td>
+                        <td>{{libro.categoria}}</td>
+                        <td>{{libro.edicion}}</td>
+                        <td>{{libro.idioma}}</td>
+                        <td>{{libro.paginas}}</td>
+                        <td>{{libro.descripcion}}</td>
+                        <td>{{libro.ejemplares}}</td>
+                        <td>
+                            <a class="btn btn-info" routerLink="/editar-libro/{{libro.id}}"> Editar </a> | 
+                            <a class="btn btn-danger" role="button" (click)="borrarLibro(libro.id,iControl)">Borrar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>

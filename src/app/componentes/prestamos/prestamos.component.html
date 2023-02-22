@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-header">
+        Prestamo de libros
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formulariodePrestamo" (ngSubmit)="enviarDatos()">
+            <div class="mb-3">
+                <label for="" class="form-label">Cédula</label>
+                <input type="text"
+                  class="form-control" formControlName="cedula" aria-describedby="helpId" placeholder="Ingrese el numero de cédula de quien llevará el libro">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Id</label>
+                <input type="text"
+                  class="form-control" formControlName="id_libro" aria-describedby="helpId" placeholder="Ingresa id de libro a prestar">
+            </div>
+            <div class="btn-group" role="group" aria-label="Button group name">
+                <button type="submit" class="btn btn-success">Prestar</button>
+                <button type="button" routerLink="/principal/" class="btn btn-primary">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
